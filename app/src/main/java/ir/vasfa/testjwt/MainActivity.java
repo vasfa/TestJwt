@@ -90,29 +90,12 @@ public class MainActivity extends AppCompatActivity {
         exoPlayerView.setControllerHideOnTouch(false);
         exoPlayerView.setPlayer(player);
         player.setPlayWhenReady(true);
-//        SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(this);
-//        exoPlayerView.setPlayer(player);
-//
-//        // Produces DataSource instances through which media data is loaded.
-//        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(this,
-//                Util.getUserAgent(this, "yourApplicationName"));
-////        Uri uri = Uri.parse("http://api.bepors.me/voice/919c68c5-5820-4a03-933f-d531ae575256");
-////        Uri uri = Uri.parse("http://wizlock.ir/files/2018_02_14_14_02_07___729990fa-6454-481f-84fa-ca2ac25a9e38___monaliza.MP3");
-//        Uri uri = Uri.parse(link);
-//// This is the MediaSource representing the media to be played.
-//        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory)
-//                .createMediaSource(uri);
-//// Prepare the player with the source.
-//        player.prepare(videoSource);
     }
 
     public void startJWPlayer(){
 
         PlaylistItem playlistItem = new PlaylistItem.Builder()
-//                .file("http://api.bepors.me/voice/919c68c5-5820-4a03-933f-d531ae575256")
-//                .file("http://wizlock.ir/files/2018_02_14_14_02_07___729990fa-6454-481f-84fa-ca2ac25a9e38___monaliza.MP3")
-//                .file("https://hw4.cdn.asset.aparat.com/aparat-video/bd333f4470d4a97f16d00918db6df36316945220-144p__64646.apt?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjQxOTZlZDA4ODFiNzM5ODlkNzZlOGE3Y2M5ZDkyZmJiIiwiZXhwIjoxNTY4NTc4ODk4LCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.K_Ur3nR-QCctwL45REbOVdMri4IY3Dhne-4EECkTonk")
-                .file(link)
+               .file(link)
                 .mediaId("123acb4e")
                 .build();
 
@@ -120,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         playlist.add(playlistItem);
         PlayerConfig config = new PlayerConfig.Builder()
                 .playlist(playlist)
-//                .file("http://api.bepors.me/voice/919c68c5-5820-4a03-933f-d531ae575256")
                 .build();
         mPlayerView.setup(config);
     }
